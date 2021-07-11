@@ -893,8 +893,6 @@ case 'grup':
 
 case 'pinterest':
 if (isBanned) return reply(mess.only.benned)
-
-if (isLimit(sender)) return reply(`Maaf Limit Anda Sudah Habis *${userky} ~ wa.me/${kytag}\nSilahkan Membeli Limit Di ${prefix}gamemenu`)
 if (!q) return reply('yg mau di cari apa?')
 pinterest(`${q}`).then( data => {
 const amsulah = data.result
@@ -1291,7 +1289,6 @@ reply('_[ ! ] Server Sedang Error_')
 })
 console.log(res)
 sendMediaURL (from, `${res.result.nowatermark}`,'nih kak')
- limitAdd(sender)
 break
 
 
